@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="support-media-compat-25.0.0">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/b67ed564b8b4a45c06736ec16a4914dfa818e6a1/output/jars/libs/internal_impl-25.0.0.jar!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/b67ed564b8b4a45c06736ec16a4914dfa818e6a1/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/b67ed564b8b4a45c06736ec16a4914dfa818e6a1/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/97bafa4a8ce43327c1d1cedc7980d63e93c1850b/output/jars/libs/internal_impl-25.0.0.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/97bafa4a8ce43327c1d1cedc7980d63e93c1850b/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/97bafa4a8ce43327c1d1cedc7980d63e93c1850b/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-media-compat/25.0.0/support-media-compat-25.0.0-sources.jar!/" />
+      <root url="jar://D:/Users/Wanderlast/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-media-compat/25.0.0/support-media-compat-25.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

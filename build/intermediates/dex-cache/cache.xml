@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\7cc5ff58be6c6f8f98902ad7e6f78b741cd1065f\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b028e8635d8f982f562ded8f06b392cdc9140ca8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\a05f296040c6dc28cc24c614374fb9af7c6a9792\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_272a61aa01d52694c970057501713dfacfa2c8d9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\7f38bc07bdfd1b50c4a0eb8927da5cff0cb5ae01\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dfe0c0c7cceff564ac19c593f32b61555d719850\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\6c050dd2c2ff74684b8f4f06cdb39cd7c528c491\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_5fcb433419660a0b84c854ead7f19da1c75bba56\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\8cdc5380850412f517d24226888e093d82038365\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e244fb1804c85c93f8ae8788de78954d2e15c92c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\8a1641a0b845ddff466e9e0c71fa53955e3bea05\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a372c4191f80489770a231f7be4820b204b886a">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5630621335e946473ff12658666d7e1e287cf786\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\7cc5ff58be6c6f8f98902ad7e6f78b741cd1065f\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_07d7a50ddd1125491bfb5925f44d287372509832\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\97bafa4a8ce43327c1d1cedc7980d63e93c1850b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d8e3e6582f9cfcc69a91479d9bd2a1657ac386fd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\2f1ef8b4f56a9ca22021f03dc1899bd23a79d4e2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a673fe3bf179ffb26e653acfa0fb9919510f9422\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-7.0.1_4a9891f8f19619db64b8c5cb384e5870d2b07e12\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\97bafa4a8ce43327c1d1cedc7980d63e93c1850b\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_62d62e8139883d92215adbb73063e15be57ed5b7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\6c050dd2c2ff74684b8f4f06cdb39cd7c528c491\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c4a668a293ac3cea9297548d618b222f8abf4513\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Users\Wanderlast\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.0_08b452c10bc45de111e87c6883b887a26d91b843\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ed515e04ed644394be82bfe2250d88f379592232">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_ec3c4382dd425e4aa1194322b817c20e9198539d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_30df4fce9bbb2a0d3bef00a50f08b6e3a44170db\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\e91e968eb39563cea51febb3e323f9689b8b1bd5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fd00bb617642821b2ec41401f01712ecaee1c367\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\e426d9c8a68f32a8d69552d06dddd0eb171bfce8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d0a246c2593fae35230f9f719fa81746e123f0e7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.1\86b122e640af09b0723e1fa44083c354ba6d9089\glide-3.6.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.6.1_8a665bb325a82bb0b7b2af3cad8f62078c8e892e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\42a246771ae49231c2f33415a9d1eb8cf3416062\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_5ba6be56743f582b7dce6de4adf87aa9780e71b9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\d72ffd71a7d10380fd081da302d20d4a0702ca09\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1fe50286b19e2ebaaf33bbac7c1ce6cc1ffe7120\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\8cdc5380850412f517d24226888e093d82038365\output\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_ab797ec16925f8c2fabe516d079ee2580e2aeac9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\9842de58c97defb0df3f382f332fd3178e26ade8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7c44b1cf66bcfae9feed2f2a1d55b06e14502c58\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Wanderlast\.android\build-cache\42a246771ae49231c2f33415a9d1eb8cf3416062\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fce46b583e7beb17e4f85a28349799ea27c91af1\classes.dex" />
+    </item>
+
+</items>

@@ -33,6 +33,7 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_list);
         ButterKnife.bind(this);
         setupToolbar();
