@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
-    <Spinner
-        android:id="@+id/type_spinner"
+
+    <EditText
+        android:id="@+id/amountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.26"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:textColor="#A9A9A9"
+        android:textSize="100dp" />
+
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Category:" />
+
+        <Spinner
+            android:id="@+id/type_spinner"
+            android:layout_width="194dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.62"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Add New Record" />
+
 
 </LinearLayout>

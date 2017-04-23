@@ -10,6 +10,10 @@ public class Transaction {
     private String type;
     private String date;
 
+    public Transaction(){
+        //default constructor
+    }
+
     public int getId(){
         return id;
     }
@@ -68,6 +72,6 @@ public class Transaction {
 
     @Override
     public String toString(){
-        return name;
+        return this.name;
     }
 }

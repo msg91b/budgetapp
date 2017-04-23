@@ -24,7 +24,6 @@ public class SQLiteHelper extends SQLiteOpenHelper{
         System.out.println("Database created.");
     }
 
-
     private static final String CREATE_DB =
             "create table if not exists" + TABLE_TRANSACTION
                     + "( " + COLUMN_transID + " integer primary key autoincrement, "
