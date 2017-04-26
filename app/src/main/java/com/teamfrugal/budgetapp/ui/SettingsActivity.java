@@ -17,12 +17,10 @@ import com.teamfrugal.budgetapp.ui.base.BaseActivity;
  *
  * Created by Andreas Schrade on 14.12.2015.
  */
-public class SettingsActivity extends BaseActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class SettingsActivity extends BaseActivity  {
 
-    public static final String KEY_OCR_MODE = "sp_key_ocr_mode";
+    public static final String KEY_OCR_MODE = "ocrMode";
 
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
@@ -45,7 +43,7 @@ public class SettingsActivity extends BaseActivity implements SharedPreferences.
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                //openDrawer();
+                openDrawer();
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -61,21 +59,7 @@ public class SettingsActivity extends BaseActivity implements SharedPreferences.
         return true;
     }
 
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        System.out.println("onShared");
-        if (key.equals(KEY_OCR_MODE)) {
-            SettingsFragment sf = new SettingsFragment();
-            SettingsFragment s = new SettingsFragment();
-            Preference ocrPref = s.find(key);
-            System.out.println("changed <----->");
-            ocrPref.setSummary(sharedPreferences.getString(key, ""));
-
-        }
-    }
-
-
-    public static class SettingsFragment extends PreferenceFragment {
+    public static class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
         public SettingsFragment() {}
 
         @Override
@@ -85,6 +69,33 @@ public class SettingsActivity extends BaseActivity implements SharedPreferences.
         }
         public Preference find(String key) {
             return findPreference(key);
+        }
+
+        @Override
+        public void onResume() {
+            super.onResume();
+            getPreferenceScreen().getSharedPreferences()
+                    .registerOnSharedPreferenceChangeListener(this);
+        }
+
+        @Override
+        public void onPause() {
+            super.onPause();
+            getPreferenceScreen().getSharedPreferences()
+                    .unregisterOnSharedPreferenceChangeListener(this);
+        }
+
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+            System.out.println("onShared!!!!!!!!!!!!!!!!!");
+            System.out.println("KEY: " + key);
+            if (key.equals(KEY_OCR_MODE)) {
+                Preference ocrPref = find(key);
+
+                System.out.println("changed <----->");
+                //System.out.println(sharedPreferences.getString(key, ""));
+                //ocrPref.setSummary(sharedPreferences.getString(key, "sdfsdf"));
+            }
         }
     }
 }

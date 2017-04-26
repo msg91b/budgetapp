@@ -41,6 +41,9 @@
         <activity android:name="com.teamfrugal.budgetapp.ui.CropActivity"
             android:label="Crop Activity"
             android:parentActivityName="com.teamfrugal.budgetapp.ui.CameraActivity"/>
+        <activity android:name=".ui.AddTransactionActivity"
+            android:label="Add Transaction Activity"
+            android:parentActivityName="com.teamfrugal.budgetapp.ui.CropActivity"/>
 
     </application>
 

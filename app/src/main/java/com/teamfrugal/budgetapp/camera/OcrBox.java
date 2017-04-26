@@ -16,7 +16,9 @@ import android.widget.TextView;
 
 import com.googlecode.tesseract.android.TessBaseAPI;
 import com.teamfrugal.budgetapp.R;
-import com.teamfrugal.budgetapp.dummy.DummyContent;
+import com.teamfrugal.budgetapp.database.DataAccess;
+import com.teamfrugal.budgetapp.database.ListContent;
+import com.teamfrugal.budgetapp.ui.AddTransactionActivity;
 import com.teamfrugal.budgetapp.ui.CropActivity;
 import com.teamfrugal.budgetapp.ui.box;
 import com.teamfrugal.budgetapp.ui.quote.ListActivity;
@@ -28,7 +30,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import static android.view.MotionEvent.INVALID_POINTER_ID;
-import static com.teamfrugal.budgetapp.dummy.DummyContent.addItem;
+import static com.teamfrugal.budgetapp.database.ListContent.addItem;
 import static java.lang.Math.pow;
 
 /**
@@ -79,6 +81,11 @@ public class OcrBox extends View {
                   final TextView aText, ProgressBar mProgressBar, FloatingActionButton sButton,
                   FloatingActionButton aButton) {
         super(context);
+
+        mLastTouchX=0;
+        mLastTouchY=0;
+
+
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 4; j++) {
                 b[i][j] = new Paint();
@@ -116,8 +123,10 @@ public class OcrBox extends View {
     }
 
     void finish(final CropActivity context) {
-        addItem(new DummyContent.DummyItem("6", R.drawable.p5, sText.getText().toString(), aText.getText().toString()));
-        context.startActivity(new Intent(context, ListActivity.class));
+        //addItem(new DummyContent.DummyItem("6", R.drawable.p5, sText.getText().toString(), aText.getText().toString()));
+        addItem(new ListContent.Item(0, ListContent.randPhotoId(), sText.getText().toString(), Double.parseDouble(aText.getText().toString())));
+        //context.startActivity(new Intent(context, ListActivity.class));
+        context.startActivity(new Intent(context, AddTransactionActivity.class));
         context.finish();
     }
 
@@ -225,6 +234,8 @@ public class OcrBox extends View {
         if (j > 1) { //bottom
             canvas.drawLine((float) (c.x-20), (float)(c.y+20),
                     (float) (c.x+20), (float)(c.y+20), b[i][j]);
+
+
         }
         if (j < 2) { //top
             canvas.drawLine((float) (c.x - 20), (float) (c.y - 20),
@@ -236,6 +247,7 @@ public class OcrBox extends View {
     protected void onDraw(Canvas canvas) {
         for (int i = 0; i < 2; i++) {
             if (boxes[i].once == 0) {
+                System.out.println("boxes once");
                 pos[i][0] = boxes[i].origin[0];
                 pos[i][1] = boxes[i].origin[1];
 
@@ -279,26 +291,30 @@ public class OcrBox extends View {
 
             // only works for 1080p screen currently. Not exactly sure how to go about supporting
             // different resolutions just yet.
-            if (corners[i][0].x > 0 && corners[i][1].x < 1080 &&
-                    corners[i][0].y > 100 && centerY[i][0] > 100 && corners[i][2].y < 1500) {
+            if (centerX[i][0] > 25 && centerX[i][1] < 1055) {
                 if (colorChange == 1) {
                     corners[i][3].x = centerXScaled[i][3];
                     corners[i][right].x = centerXScaled[i][1];
-
-                    corners[i][3].y = centerYScaled[i][3];
-                    corners[i][left].y = centerYScaled[i][2];
                 } else if (active != -1) {
                     corners[i][0].x = centerXScaled[i][0];
                     corners[i][1].x = centerXScaled[i][3];
                     corners[i][2].x = centerXScaled[i][0];
                     corners[i][3].x = centerXScaled[i][3];
+                }
+            }
 
+            if (centerY[i][0] > 100 && centerY[i][2] < 1500) {
+                if (colorChange == 1) {
+                    corners[i][3].y = centerYScaled[i][3];
+                    corners[i][left].y = centerYScaled[i][2];
+                } else if (active != -1) {
                     corners[i][0].y = centerYScaled[i][0];
                     corners[i][1].y = centerYScaled[i][0];
                     corners[i][2].y = centerYScaled[i][3];
                     corners[i][3].y = centerYScaled[i][3];
                 }
             }
+
             for (int j = 0; j < 4; j++) {
                 b[i][j].setStyle(Paint.Style.STROKE);
                 b[i][j].setColor(boxes[i].color);
@@ -316,8 +332,7 @@ public class OcrBox extends View {
         Point s = corners[active][0];
         Point e = corners[active][3];
 
-        storeClip = Bitmap.createBitmap(image, (s.x - 15), s.y+25,
-                (e.x - s.x + 27), (e.y - s.y+23));
+        storeClip = Bitmap.createBitmap(image, s.x - 15, s.y + 25, e.x - s.x + 27, e.y - s.y + 23);
 
         File f = new File(Environment.getExternalStorageDirectory() + "/sub" + active + ".jpeg");
         try {

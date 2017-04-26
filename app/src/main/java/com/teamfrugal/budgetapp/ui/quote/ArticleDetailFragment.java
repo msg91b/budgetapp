@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 
 import butterknife.Bind;
 import com.teamfrugal.budgetapp.R;
+import com.teamfrugal.budgetapp.database.ListContent;
 import com.teamfrugal.budgetapp.dummy.DummyContent;
 import com.teamfrugal.budgetapp.ui.base.BaseActivity;
 import com.teamfrugal.budgetapp.ui.base.BaseFragment;
@@ -35,7 +36,8 @@ public class ArticleDetailFragment extends BaseFragment {
     /**
      * The dummy content of this fragment.
      */
-    private DummyContent.DummyItem dummyItem;
+    //private DummyContent.DummyItem dummyItem;
+    private ListContent.Item listItem;
 
     @Bind(R.id.amount)
     TextView amount;
@@ -52,7 +54,8 @@ public class ArticleDetailFragment extends BaseFragment {
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             // load dummy item by using the passed item ID.
-            dummyItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            //dummyItem = DummyContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            listItem = ListContent.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
         }
 
         setHasOptionsMenu(true);
@@ -67,17 +70,21 @@ public class ArticleDetailFragment extends BaseFragment {
             ((BaseActivity) getActivity()).setToolbar((Toolbar) rootView.findViewById(R.id.toolbar));
         }
 
-        if (dummyItem != null) {
+       // if (dummyItem != null) {
+        if (listItem != null) {
             loadBackdrop();
-            collapsingToolbar.setTitle("Store: " + dummyItem.title);
-            amount.setText("Amount: " + dummyItem.author);
+            //collapsingToolbar.setTitle("Store: " + dummyItem.title);
+            //amount.setText("Amount: " + dummyItem.author);
+            collapsingToolbar.setTitle("Store: " + listItem.store);
+            amount.setText("Amount: " + listItem.amount);
         }
 
         return rootView;
     }
 
     private void loadBackdrop() {
-        Glide.with(this).load(dummyItem.photoId).centerCrop().into(backdropImg);
+        //Glide.with(this).load(dummyItem.photoId).centerCrop().into(backdropImg);
+        Glide.with(this).load(listItem.photoId).centerCrop().into(backdropImg);
     }
 
     @Override

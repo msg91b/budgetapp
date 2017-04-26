@@ -64,6 +64,8 @@ public class ocrInterface extends AsyncTask<Void, Integer, String> {
         this.aText = aText;
 
         SharedPreferences mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(cc);
+        //SharedPreferences.Editor editor = mSharedPreferences.edit();
+        //editor.putString("KEY_OCR_MODE", "grr");
         mode = Integer.parseInt(mSharedPreferences.getString(KEY_OCR_MODE, "0"));
 
         System.out.println("Mode <----> " + mode);

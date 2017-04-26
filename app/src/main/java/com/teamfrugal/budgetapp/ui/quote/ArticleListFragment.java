@@ -22,6 +22,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 
 import com.teamfrugal.budgetapp.R;
+import com.teamfrugal.budgetapp.database.ListContent;
 import com.teamfrugal.budgetapp.dummy.DummyContent;
 
 /**
@@ -56,13 +57,15 @@ public class ArticleListFragment extends ListFragment {
         adapter = (MyListAdapter) getListAdapter();
         setHasOptionsMenu(true);
         System.out.println("fragment created");
+        new ListContent();
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
         // notify callback about the selected list item
-        callback.onItemSelected(DummyContent.ITEMS.get(position).id);
+        //callback.onItemSelected(DummyContent.ITEMS.get(position).id);
+        callback.onItemSelected(""+ListContent.results.get(position).id);
     }
 
     /**
@@ -103,18 +106,21 @@ public class ArticleListFragment extends ListFragment {
 
         @Override
         public int getCount() {
-            System.out.println(DummyContent.ITEMS.size());
-            return DummyContent.ITEMS.size();
+            //System.out.println(DummyContent.ITEMS.size());
+            //return DummyContent.ITEMS.size();
+            return ListContent.results.size();
         }
 
         @Override
         public Object getItem(int position) {
-            return DummyContent.ITEMS.get(position);
+            //return DummyContent.ITEMS.get(position);
+            return ListContent.results.get(position);
         }
 
         @Override
         public long getItemId(int position) {
-            return DummyContent.ITEMS.get(position).id.hashCode();
+            //return DummyContent.ITEMS.get(position).id.hashCode();
+            return ListContent.results.get(position).id;
         }
 
         @Override
@@ -123,9 +129,10 @@ public class ArticleListFragment extends ListFragment {
                 convertView = LayoutInflater.from(getActivity()).inflate(R.layout.list_item_article, container, false);
             }
 
-            final DummyContent.DummyItem item = (DummyContent.DummyItem) getItem(position);
-            ((TextView) convertView.findViewById(R.id.article_title)).setText(item.title);
-            ((TextView) convertView.findViewById(R.id.article_subtitle)).setText(item.author);
+            //final DummyContent.DummyItem item = (DummyContent.DummyItem) getItem(position);
+            final ListContent.Item item = (ListContent.Item) getItem(position);
+            ((TextView) convertView.findViewById(R.id.article_title)).setText(item.store);
+            ((TextView) convertView.findViewById(R.id.article_subtitle)).setText(""+item.amount);
             final ImageView img = (ImageView) convertView.findViewById(R.id.thumbnail);
             Glide.with(getActivity()).load(item.photoId).asBitmap().fitCenter().into(new BitmapImageViewTarget(img) {
                 @Override

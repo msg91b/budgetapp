@@ -1,7 +1,7 @@
 package com.teamfrugal.budgetapp.database;
 
 //class for transaction, helps us fill in everything on the layout
-public class Transaction {
+public class TransactionA {
     private int id;
     private String name;
     private double amount;
@@ -10,9 +10,21 @@ public class Transaction {
     private String type;
     private String date;
 
-    public Transaction(){
+    public TransactionA(){
         //default constructor
     }
+
+    public TransactionA(String n, double am, String acc, String c, String t, String d){
+        this.name = n;
+        this.amount = am;
+        this.account = acc;
+        this.category = c;
+        this.type = t;
+        this.date = d;
+    }
+
+
+
 
     public int getId(){
         return id;

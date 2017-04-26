@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.teamfrugal.budgetapp.R;
+import com.teamfrugal.budgetapp.database.ListContent;
 import com.teamfrugal.budgetapp.dummy.DummyContent;
 import com.teamfrugal.budgetapp.ui.CameraActivity;
 import com.teamfrugal.budgetapp.ui.base.BaseActivity;
@@ -39,6 +40,9 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
         setContentView(R.layout.activity_list);
         ButterKnife.bind(this);
         setupToolbar();
+
+        ListContent content = new ListContent();
+        content.init(this);
 
         if(!OpenCVLoader.initDebug()){
             Log.d(TAG, "OpenCV not loaded");
@@ -99,7 +103,8 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
     }
 
     private void setupDetailFragment() {
-        ArticleDetailFragment fragment =  ArticleDetailFragment.newInstance(DummyContent.ITEMS.get(0).id);
+        //ArticleDetailFragment fragment =  ArticleDetailFragment.newInstance(DummyContent.ITEMS.get(0).id);
+        ArticleDetailFragment fragment = ArticleDetailFragment.newInstance(""+ListContent.results.get(0).id);
         getFragmentManager().beginTransaction().replace(R.id.article_detail_container, fragment).commit();
     }
 

@@ -12,10 +12,13 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
+import static com.teamfrugal.budgetapp.database.SQLiteHelper.COLUMN_transID;
+
 public class DataAccess {
-    private SQLiteDatabase database;
+    private static SQLiteDatabase database;
     private SQLiteHelper helper;
-    private String[] allColumns = { SQLiteHelper.COLUMN_transID,
+    private static Cursor cc;
+    private String[] allColumns = { COLUMN_transID,
             SQLiteHelper.COLUMN_name, SQLiteHelper.COLUMN_amount, SQLiteHelper.COLUMN_account,
             SQLiteHelper.COLUMN_category, SQLiteHelper.COLUMN_type, SQLiteHelper.COLUMN_datetime
     };
@@ -32,10 +35,39 @@ public class DataAccess {
         helper.close();
     }
 
-    public Transaction newTransact(String name, String amount, String account, String category,
+    public TransactionA newTransact(String name, Double amount, String account, String category,
                                    String type, String date){
-        Transaction t = new Transaction();
+        TransactionA t = new TransactionA(name, amount, account, category, type, date);
 
         return t;
+    }
+
+    public SQLiteDatabase getDatabase() {
+        return database;
+    }
+
+    // grabbing all items?
+    public Cursor query() {
+        System.out.println(database.rawQuery("SELECT * FROM transactionA",null));
+        return database.rawQuery("SELECT * FROM transactionA",null);
+    }
+    public void drop() {
+        database.execSQL("DROP TABLE transactionA");
+    }
+
+    public static int nextId() {
+        String stmt = "SELECT MAX('" + COLUMN_transID + "') FROM transactionA";
+        cc = database.rawQuery(stmt, null);
+
+        int id = 0;
+        if (cc.moveToFirst())
+        {
+            do
+            {
+                id = cc.getInt(0);
+            } while(cc.moveToNext());
+        }
+        System.out.println("id: " + id+1);
+        return id+1;
     }
 }
