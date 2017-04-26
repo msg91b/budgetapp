@@ -9,15 +9,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.teamfrugal.budgetapp.R;
+import com.teamfrugal.budgetapp.database.DataAccess;
 import com.teamfrugal.budgetapp.database.ListContent;
+import com.teamfrugal.budgetapp.database.SQLiteHelper;
 import com.teamfrugal.budgetapp.dummy.DummyContent;
 import com.teamfrugal.budgetapp.ui.CameraActivity;
 import com.teamfrugal.budgetapp.ui.base.BaseActivity;
 import com.teamfrugal.budgetapp.util.LogUtil;
 
 import org.opencv.android.OpenCVLoader;
+import org.w3c.dom.Text;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -33,6 +37,7 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
      */
     private boolean twoPaneMode;
     static final String TAG = "mainActivity";
+    static int doOnce = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +46,22 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
         ButterKnife.bind(this);
         setupToolbar();
 
+
         ListContent content = new ListContent();
-        content.init(this);
+
+        //TextView total = (TextView) findViewById(R.id.textView);
+        TextView tTextView = (TextView) findViewById(R.id.textView);
+        content.init(this, tTextView);
+
+
+        if (doOnce == 0) {
+            DataAccess da = new DataAccess(this);
+            da.open();
+            //da.close();
+            //da.open();
+            da.drop();
+            doOnce++;
+        }
 
         if(!OpenCVLoader.initDebug()){
             Log.d(TAG, "OpenCV not loaded");

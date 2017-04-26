@@ -2,7 +2,6 @@ package com.teamfrugal.budgetapp.ui;
 import java.util.ArrayList;
 import java.util.List;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,14 +13,10 @@ import android.widget.Spinner;
 import com.teamfrugal.budgetapp.R;
 import com.teamfrugal.budgetapp.database.DataAccess;
 import com.teamfrugal.budgetapp.database.ListContent;
-import com.teamfrugal.budgetapp.database.TransactionA;
 import com.teamfrugal.budgetapp.ui.quote.ListActivity;
 
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class AddTransactionActivity extends Activity implements OnItemSelectedListener {
 
@@ -74,8 +69,8 @@ public class AddTransactionActivity extends Activity implements OnItemSelectedLi
             public void onClick(View arg0) {
                 mDataAccess = new DataAccess(getApplicationContext());
                 mDataAccess.open();
-                //TransactionA newTransaction = mDataAccess.newTransact(ListContent.newest.store, ListContent.newest.amount, "acct", mItemSelected , "type", "date");
-                final String SQL_ADD = "INSERT INTO  TransactionA Values (" + ListContent.newest.id + ", '" + ListContent.newest.store + "', '" + ListContent.newest.amount
+                //Transaction newTransaction = mDataAccess.newTransact(ListContent.newest.store, ListContent.newest.amount, "acct", mItemSelected , "type", "date");
+                final String SQL_ADD = "INSERT INTO transactionA Values (" + ListContent.newest.id + ", '" + ListContent.newest.store + "', '" + ListContent.newest.amount
                         + "', " + "'a', '" + mItemSelected + "', 'c', 'd' );";
                 mDataAccess.getDatabase().execSQL(SQL_ADD);
                 //System.out.println("item added to db");

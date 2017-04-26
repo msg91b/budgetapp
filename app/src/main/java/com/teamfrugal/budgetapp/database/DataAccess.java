@@ -3,10 +3,6 @@ package com.teamfrugal.budgetapp.database;
 /* This is the DAO
  */
 
-import java.util.ArrayList;
-import java.util.List;
-
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -35,9 +31,9 @@ public class DataAccess {
         helper.close();
     }
 
-    public TransactionA newTransact(String name, Double amount, String account, String category,
+    public Transaction newTransact(String name, Double amount, String account, String category,
                                    String type, String date){
-        TransactionA t = new TransactionA(name, amount, account, category, type, date);
+        Transaction t = new Transaction(name, amount, account, category, type, date);
 
         return t;
     }
@@ -52,11 +48,12 @@ public class DataAccess {
         return database.rawQuery("SELECT * FROM transactionA",null);
     }
     public void drop() {
-        database.execSQL("DROP TABLE transactionA");
+        database.execSQL("DROP TABLE if exists transactionA");
+        database.execSQL(SQLiteHelper.CREATE_DB);
     }
 
     public static int nextId() {
-        String stmt = "SELECT MAX('" + COLUMN_transID + "') FROM transactionA";
+        String stmt = "SELECT '" + COLUMN_transID + "' FROM transactionA";
         cc = database.rawQuery(stmt, null);
 
         int id = 0;
@@ -64,10 +61,16 @@ public class DataAccess {
         {
             do
             {
-                id = cc.getInt(0);
+                int tmp = cc.getInt(0);
+                if (tmp > id) {
+                    id = tmp;
+                }
+                //id = cc.getInt(0);
+                System.out.println("iddd::::" + id);
             } while(cc.moveToNext());
         }
-        System.out.println("id: " + id+1);
+        System.out.println("idb: " + id);
+        System.out.println("ida: " + (id+1));
         return id+1;
     }
 }

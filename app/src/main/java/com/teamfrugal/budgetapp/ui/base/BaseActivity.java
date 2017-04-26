@@ -9,13 +9,17 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.teamfrugal.budgetapp.R;
+import com.teamfrugal.budgetapp.database.ListContent;
 import com.teamfrugal.budgetapp.ui.AboutActivity;
 import com.teamfrugal.budgetapp.ui.SettingsActivity;
 import com.teamfrugal.budgetapp.ui.ViewSamplesActivity;
 import com.teamfrugal.budgetapp.ui.quote.ListActivity;
 
+import static com.teamfrugal.budgetapp.R.id.textView;
 import static com.teamfrugal.budgetapp.util.LogUtil.logD;
 import static com.teamfrugal.budgetapp.util.LogUtil.makeLogTag;
 
@@ -50,7 +54,12 @@ public abstract class BaseActivity extends AppCompatActivity {
             return;
         }
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView  navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        View header = navigationView.getHeaderView(0);
+        TextView total = (TextView)header.findViewById(R.id.textView);
+        total.setText("-$" + ListContent.total);
+
         if (navigationView != null) {
             setupDrawerSelectListener(navigationView);
             setSelectedItem(navigationView);

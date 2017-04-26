@@ -5,12 +5,18 @@
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:orientation="vertical"
-    android:gravity="bottom">
+    android:gravity="bottom"
+    android:weightSum="1">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/navigation_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:layout_weight="0.80"
+        android:paddingTop="40dp"
+        android:text="0.00"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="60dp" />
 
 </LinearLayout>
