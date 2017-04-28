@@ -1,8 +1,12 @@
 package com.teamfrugal.budgetapp.ui.quote;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.Menu;
@@ -10,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.teamfrugal.budgetapp.R;
 import com.teamfrugal.budgetapp.database.DataAccess;
@@ -37,7 +42,8 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
      */
     private boolean twoPaneMode;
     static final String TAG = "mainActivity";
-    static int doOnce = 0;
+    //static int doOnce = 0;
+    private static final int PERMISSION_FOR_CAMERA = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,9 +92,27 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
 
     @OnClick(R.id.fabCamera)
     public void onFabClicked(View view) {
-        Intent intent = new Intent(ListActivity.this,
-                CameraActivity.class);
-        startActivity(intent);
+
+        //this checks if we have camera permissions and requests them if we don't
+        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED){
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.CAMERA)){
+
+                // Gives rationale for needing a permission.
+
+            } else {
+
+                // No explanation needed, we can request the permission.
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
+                        PERMISSION_FOR_CAMERA);
+            }
+        } else {
+            Intent intent = new Intent(ListActivity.this,
+                    CameraActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -168,5 +192,34 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
     @Override
     public boolean providesActivityToolbar() {
         return true;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_FOR_CAMERA: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted
+                    Intent intent = new Intent(ListActivity.this,
+                            CameraActivity.class);
+                    startActivity(intent);
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+
+                    //maybe put a toast here saying that the app can't do anything without camera?
+                    String cameraExplain = "Cannot open camera without permission.";
+                    Toast toast = Toast.makeText(this, cameraExplain, Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+                return;
+            }
+        }
     }
 }
