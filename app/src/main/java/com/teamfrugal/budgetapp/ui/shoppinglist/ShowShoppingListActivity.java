@@ -41,6 +41,7 @@ public class ShowShoppingListActivity extends BaseActivity {
 		setContentView(R.layout.shopping_list);
 		setupToolbar();
 		this.setTitle("Est cost: ");
+		
 		Item bread = new Item("bread", 2.43f, 1);
 		Item milk = new Item("milk", 3.80f, 1);
 		Item OJ = new Item("orange juice", 5f, 1);
