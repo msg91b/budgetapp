@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b8ef51c08aa15be96d4dae98650a3d3694a5ebb3">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f3daf0269754ba16f3d1f6f086898378acfa4558\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_30df4fce9bbb2a0d3bef00a50f08b6e3a44170db\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4ddf0aad2a83e1ea249fb654f4e4a4917d4f6683">
-        <dex dex="D:\Wanderlast\Documents\GitHub\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_ec3c4382dd425e4aa1194322b817c20e9198539d\classes.dex" />
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_7074dbb99d2462423b8030aa37f61390daa690df\classes.dex" />
     </item>
 
 </items>
