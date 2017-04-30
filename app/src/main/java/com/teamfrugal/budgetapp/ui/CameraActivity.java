@@ -35,7 +35,7 @@ import java.util.logging.FileHandler;
  *                      which is laid out in cameraOCR.java
  *
  * Related layout:     activity_camera.xml
- * Called from:        MainActivity.java
+ * Called from:        ShowShoppingListActivity.java
  * Calls:              cropImage.java, cameraOCR.java
  */
 

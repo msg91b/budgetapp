@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b8ef51c08aa15be96d4dae98650a3d3694a5ebb3">
-        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f3daf0269754ba16f3d1f6f086898378acfa4558\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_7074dbb99d2462423b8030aa37f61390daa690df\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f277e0a818051484d7a26f9a699a6686e331c7d6">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f3daf0269754ba16f3d1f6f086898378acfa4558\classes.dex" />
     </item>
 
 </items>
