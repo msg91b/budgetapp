@@ -16,7 +16,8 @@ public class Item {
         this.price = price;
         this.quantity = quantity;
     }
+    public float getPrice(){ return quantity * price; }
     public String toString(){
-        return String.format(Locale.ENGLISH, "%s $%.2f", name, price);
+        return String.format(Locale.ENGLISH, "%s $%.2f \tquantity: %d", name, price, quantity);
     }
 }

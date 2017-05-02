@@ -41,7 +41,7 @@ public class ShowShoppingListActivity extends BaseActivity {
 		setContentView(R.layout.shopping_list);
 		setupToolbar();
 		this.setTitle("Est cost: ");
-		
+
 		Item bread = new Item("bread", 2.43f, 1);
 		Item milk = new Item("milk", 3.80f, 1);
 		Item OJ = new Item("orange juice", 5f, 1);
@@ -144,7 +144,7 @@ public class ShowShoppingListActivity extends BaseActivity {
 						if (deltaX >= v.getWidth() /3 ) // swipe to right
 						{
 							Item t = (Item) array.get(lv.getPositionForView(v));
-							estPrice += t.price;
+							estPrice += t.getPrice();
 							main.setTitle(String.format("Est cost: $%.2f", estPrice));
 							v.setEnabled(false); // need to disable the view for the animation to run
 
@@ -210,8 +210,10 @@ public class ShowShoppingListActivity extends BaseActivity {
 					else // user was not swiping; registers as a click
 					{
 						mItemPressed = false;
-						lv.setEnabled(true);
-
+						Item t = (Item) array.get(lv.getPositionForView(v));
+						t.quantity += 1;
+						//lv.setEnabled(false);
+						lv.invalidateViews();
 						int i = lv.getPositionForView(v);
 
 						Toast.makeText(ShowShoppingListActivity.this, array.get(i).toString(), Toast.LENGTH_LONG).show();

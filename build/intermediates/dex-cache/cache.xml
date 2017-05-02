@@ -2,6 +2,15 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\bba71a67be5b6be4bf3fe569aa8192c0f8c69e71\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_6189e289a314db8b37a76f35b144b5ef0fc95eb9.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
@@ -11,6 +20,60 @@
         <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_7074dbb99d2462423b8030aa37f61390daa690df\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\8511baf57b8970045d6bc65d360ddabe32fb39be\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_505f41543b153248ce04642147e1a3a3f601e220.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\cb6ec29612a2d7ca8c7de92c5e1fba4325a6605f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_7c966fbb043e2a9840fa4169284f441bd129f233.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\307e6074f9859ed18449f572dd1ed1ac0888faf8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_7b6dc8a69a6d3b956f920726b66e63830dfa09e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\bbd4b1baf0168ffaf9eca3d667d02ea039375af2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_c391950a7478845ff5ea577f0e4d86d56f0b1143.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\2072c7f13b16f1f893d148f1494589e0d05c20f4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_89ac2d3c12412e552b14602e9a93a6d1fed81693.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\1d26198c7c119f49ac4acd3e194246082a99c3a8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_638cbb0ccbb313dcfd3474e68a537292f3df553a.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
@@ -18,6 +81,105 @@
         revision="25.0.0"
         sha1="f277e0a818051484d7a26f9a699a6686e331c7d6">
         <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_f3daf0269754ba16f3d1f6f086898378acfa4558\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\openCVLibrary320\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="038e8806866760ccd8568b401b8052e937e4be1a">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_ae08a03a9892a2c7a717397a0219359a09084d94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\f0a98204f6f8d5e9d856567d5167a6d6b75ec8a9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_44692de3c59ab08be7a6d045bf19bb3b4c4e2a90.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\1ce9a8cc4b0376a88a079e1525d3a993541b35b9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_8be4bf8f9a2c0839168d212ea128d4711598eda1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\1db35085acb4d6c732422bd02a435bad6880e1ae\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="27377d2be96cab8211f228b424f221f34a0fa5bc">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_9badb42968ea1feb6931a13102c860eed74c479c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Android_Dev\SDK\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_1da0b1f2532c12d962e36c27a1bf357b4a7a8252.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\578dfd5208aeb0d3cc5393e230ff42bd606463d4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_6837e5ca065836b681c8845c32078754ea5173f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1_2aa30928c611dcd6c27f82e321a880581676ff8f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\glide-3.7.0_d5d5626556c2099111edf7e4792c520e0b9935c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\ce27474846b86bdf4432ee9793b744ee30093ec9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_6c3f12a9fc1188f5b796f6db1c06853be61a1f84.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\e499f57e612fa003959bd44a367ed61fe9c9d5af\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_b1416253cf6bf0ca94b92dd1497f32ac6f7481dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Anthony\.android\build-cache\78db6f74c5ddbbc430996fa622b4405a41bf6316\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="F:\My Documents\CSUB\4928\budgetapp-master\budgetapp\app\build\intermediates\pre-dexed\debug\classes_3f4afd27ce0a24f5334768af24d1e7e3713b51ad.jar" />
     </item>
 
 </items>
