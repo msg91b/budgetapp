@@ -27,7 +27,7 @@ public class SQLiteHelper extends SQLiteOpenHelper{
     }
 
     public static final String CREATE_DB =
-            "CREATE TABLE IF NOT EXISTS" + TABLE_TRANSACTION
+            "CREATE TABLE IF NOT EXISTS " + TABLE_TRANSACTION
                     + " (" + COLUMN_transID + " integer primary key autoincrement, "
                     + COLUMN_name + " text not null, "
                     + COLUMN_amount + " real not null, "
