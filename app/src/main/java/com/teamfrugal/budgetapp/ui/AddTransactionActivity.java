@@ -17,6 +17,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -43,6 +45,7 @@ public class AddTransactionActivity extends Activity implements OnItemSelectedLi
     private boolean isExpense;
     private Switch mySwitch;
     String expenseName = "expense";
+    private double amount = 0.00;
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
@@ -102,10 +105,26 @@ public class AddTransactionActivity extends Activity implements OnItemSelectedLi
             }
         });
 
-        EditText accountBox = (EditText) findViewById(R.id.amountText);
-
+        final EditText accountBox = (EditText) findViewById(R.id.amountText);
         accountBox.setText(ListContent.newest.amount+"");
+        amount = ListContent.newest.amount;
 
+        TextWatcher textWatcher = new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+                amount = Double.parseDouble(accountBox.getText().toString());
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+
+            }
+        };
+
+        accountBox.addTextChangedListener(textWatcher);
         Button add = (Button) findViewById(R.id.add);
 
         add.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +132,7 @@ public class AddTransactionActivity extends Activity implements OnItemSelectedLi
                 mDataAccess = new DataAccess(getApplicationContext());
                 mDataAccess.open();
                 //Transaction newTransaction = mDataAccess.newTransact(ListContent.newest.store, ListContent.newest.amount, "acct", mItemSelected , "type", "date");
-                final String SQL_ADD = "INSERT INTO transactionA Values (" + ListContent.newest.id + ", '" + ListContent.newest.store + "', '" + ListContent.newest.amount
+                final String SQL_ADD = "INSERT INTO transactionA Values (" + ListContent.newest.id + ", '" + ListContent.newest.store + "', '" + amount
                         + "', " + "'a', '" + mItemSelected + "', '" + expenseName + "', DATETIME('now', 'localtime') );";
                 mDataAccess.getDatabase().execSQL(SQL_ADD);
                 //System.out.println("item added to db");
