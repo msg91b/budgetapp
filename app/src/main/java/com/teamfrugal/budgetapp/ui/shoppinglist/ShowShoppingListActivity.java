@@ -149,11 +149,11 @@ public class ShowShoppingListActivity extends BaseActivity {
 							v.setEnabled(false); // need to disable the view for the animation to run
 
 							// stacked the animations to have the pause before the views flings off screen
-							v.animate().setDuration(30).translationX(-v.getWidth()/3).withEndAction(new Runnable() {
+							v.animate().setDuration(80).translationX(-v.getWidth()/3).withEndAction(new Runnable() {
 								@Override
 								public void run()
 								{
-									v.animate().setDuration(30).alpha(0).translationX(-v.getWidth()).withEndAction(new Runnable()
+									v.animate().setDuration(80).alpha(0).translationX(-v.getWidth()).withEndAction(new Runnable()
 									{
 										@Override
 										public void run()
@@ -183,9 +183,9 @@ public class ShowShoppingListActivity extends BaseActivity {
 							mItemPressed = false;
 
 
-							v.animate().setDuration(10).translationX(v.getWidth()/3); // could pause here if you want, same way as delete
-							TextView tv = (TextView) v.findViewById(R.id.row_item);
-							tv.setText("Swiped!");
+							//v.animate().setDuration(10).translationX(v.getWidth()/3); // could pause here if you want, same way as delete
+							//TextView tv = (TextView) v.findViewById(R.id.row_item);
+							//tv.setText("Swiped!");
 							return true;
 						}
 					}
@@ -196,7 +196,7 @@ public class ShowShoppingListActivity extends BaseActivity {
 				{
 					if (mSwiping) // if the user was swiping, don't go to the and just animate the view back into position
 					{
-						v.animate().setDuration(30).translationX(0).withEndAction(new Runnable()
+						v.animate().setDuration(80).translationX(0).withEndAction(new Runnable()
 						{
 							@Override
 							public void run()

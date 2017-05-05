@@ -42,7 +42,7 @@ import java.util.logging.FileHandler;
 public class CameraActivity extends AppCompatActivity {
     /** Check if this device has a camera */
     private FrameLayout preview;
-    private Camera ocrCamera = null;
+    private static Camera ocrCamera = null;
     private CameraPreview ocrPreview = null;
     private int flashOn = 0;
     FloatingActionButton snapPhoto;
@@ -63,6 +63,7 @@ public class CameraActivity extends AppCompatActivity {
 
         snapPhoto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
+
 
                 ocrCamera.takePicture(null, null, savePicture);
                 try {
@@ -175,6 +176,7 @@ public class CameraActivity extends AppCompatActivity {
             }
             camera.setParameters(p);
         } catch (Exception e) {
+			e.printStackTrace();
             System.out.println("Unable to get instance of camera");
         }
 

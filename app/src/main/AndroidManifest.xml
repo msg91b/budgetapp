@@ -45,7 +45,7 @@
             android:label="Add Transaction Activity"
             android:parentActivityName="com.teamfrugal.budgetapp.ui.CropActivity"/>
 
-        <activity android:name="com.teamfrugal.budgetapp.ui.shoppinglist.ShowShoppingListActivity"
+        <activity android:name="com.teamfrugal.budgetapp.ui.shoppinglist.AddItemActivity"
                   android:label="Shopping List"
                   android:parentActivityName="com.teamfrugal.budgetapp.ui.quote.ListActivity"/>
 

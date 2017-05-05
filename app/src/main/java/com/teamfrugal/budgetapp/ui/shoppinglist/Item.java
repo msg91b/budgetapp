@@ -18,6 +18,6 @@ public class Item {
     }
     public float getPrice(){ return quantity * price; }
     public String toString(){
-        return String.format(Locale.ENGLISH, "%s $%.2f \tquantity: %d", name, price, quantity);
+        return String.format(Locale.ENGLISH, "%s $%.2f", name, price);//, quantity);
     }
 }
