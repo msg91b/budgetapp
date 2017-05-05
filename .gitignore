@@ -1,1 +1,3 @@
 .idea/workspace.xml
+*.rawproto
+.gradle/3.3/taskArtifacts/taskArtifacts.lock

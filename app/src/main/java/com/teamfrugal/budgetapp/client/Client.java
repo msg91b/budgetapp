@@ -28,12 +28,13 @@ public class Client {
         }
     }
 
-    public void sendImage(byte [] data){
+    public void sendImage(byte [] data, int type){
         if(connection == null)
             return;
         try {
             DataInputStream in = new DataInputStream(connection.getInputStream());
             DataOutputStream out = new DataOutputStream(connection.getOutputStream());
+            out.writeInt(type);
             out.writeInt( data.length);
             out.write(data, 0, data.length);
             result = in.readUTF();

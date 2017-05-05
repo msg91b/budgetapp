@@ -158,7 +158,6 @@ public class ListContent extends BaseActivity {
         public final String isExpense;
         public final String date;
 
-
         public Item(int id, int photoId, String store, double amount, String date) {
             this.id = id;
             this.photoId = photoId;

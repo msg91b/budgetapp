@@ -52,6 +52,7 @@ public class ocrInterface extends AsyncTask<Void, Integer, String> {
     // Mode == 0 for Phone Processing
     // MODE == 1 for Server Processing
     //private int MODE = 0;
+    private int whiteListType; // if 0 then readWord, 1 then readNum
     private int mode;
     private int mode2;
     ProgressBar mp[] = new ProgressBar[2];
@@ -64,6 +65,7 @@ public class ocrInterface extends AsyncTask<Void, Integer, String> {
         this.text = text;
         this.sText = sText;
         this.aText = aText;
+        whiteListType = reading;
 
         SharedPreferences mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(cc);
         //SharedPreferences.Editor editor = mSharedPreferences.edit();
@@ -105,7 +107,8 @@ public class ocrInterface extends AsyncTask<Void, Integer, String> {
             try{
                 Client user = new Client();
                 user.connect("136.168.201.100",43281); // sleipnir host
-                user.sendImage(ImgUtil.bitmap2byte(outBitmap));
+                //user.sendImage(ImgUtil.bitmap2byte(outBitmap));
+                user.sendImage(ImgUtil.bitmap2byte(outBitmap), whiteListType);
                 String serverReply = user.getResult();
                 user.close();
                 result = serverReply;
@@ -168,6 +171,8 @@ public class ocrInterface extends AsyncTask<Void, Integer, String> {
 
     // sets tesseract to read in words only
     public ocrInterface readWord(){
+        if(mode == 1)
+            return this;
         System.out.println("readword");
         if(mTess == null)
             return null;
@@ -176,6 +181,8 @@ public class ocrInterface extends AsyncTask<Void, Integer, String> {
 
     // sets tesseract to read in numbers only
     public ocrInterface readNum(){
+        if(mode == 1)
+            return this;
         System.out.println("readnum");
         if(mTess == null)
             return null;

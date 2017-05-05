@@ -145,8 +145,10 @@ public class OcrBox extends View {
 
     void finish(final CropActivity context) {
         //addItem(new DummyContent.DummyItem("6", R.drawable.p5, sText.getText().toString(), aText.getText().toString()));
+        double price = Double.parseDouble(aText.getText().toString().replace("$","").replace(" ",""));
+        //addItem(new ListContent.Item(0, ListContent.randPhotoId(), sText.getText().toString(), price));
         addItem(new ListContent.Item(0, R.drawable.ic_remove_circle_black_24dp,
-                sText.getText().toString(), Double.parseDouble(aText.getText().toString()), "" ));
+                sText.getText().toString(), price, ""));
         //context.startActivity(new Intent(context, ListActivity.class));
         context.startActivity(new Intent(context, AddTransactionActivity.class));
         context.finish();

@@ -89,15 +89,25 @@ public class ListActivity extends BaseActivity implements ArticleListFragment.Ca
     public void onFabClicked(View view) {
 
         //this checks if we have camera permissions and requests them if we don't
-        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+        int permissionCheck[] = {ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA),
+                ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)};
+        int suc = PackageManager.PERMISSION_GRANTED;
 
-        if (permissionCheck != PackageManager.PERMISSION_GRANTED){
-                // No explanation needed, we can request the permission.
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
-                        PERMISSION_FOR_CAMERA);
-        } else {
-            Intent intent = new Intent(ListActivity.this,
-                    CameraActivity.class);
+        if (permissionCheck[0] != suc){
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
+                    PERMISSION_FOR_CAMERA);
+        }
+        if(permissionCheck[1] != suc){
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    PERMISSION_FOR_CAMERA);
+        }
+        if(permissionCheck[2] != suc) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                    PERMISSION_FOR_CAMERA);
+        }
+        if( permissionCheck[0] == suc && permissionCheck[1] == suc && permissionCheck[2] == suc){
+            Intent intent = new Intent(ListActivity.this, CameraActivity.class);
             startActivity(intent);
         }
     }

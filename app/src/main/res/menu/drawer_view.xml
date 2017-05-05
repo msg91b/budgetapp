@@ -6,10 +6,14 @@
             android:icon="@drawable/ic_discuss"
             android:title="@string/navigation_quotes" />
         <item
+            android:id="@+id/nav_shoppingList"
+            android:icon="@drawable/ic_shopping_cart"
+            android:title="@string/navigation_shopping_list"
+            />
+        <item
             android:id="@+id/nav_samples"
             android:icon="@drawable/ic_forum"
             android:title="@string/navigation_samples" />
-
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_action_settings"

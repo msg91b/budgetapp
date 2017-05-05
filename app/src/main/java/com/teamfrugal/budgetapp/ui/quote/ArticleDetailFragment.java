@@ -1,7 +1,9 @@
 package com.teamfrugal.budgetapp.ui.quote;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.audiofx.BassBoost;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -21,6 +23,7 @@ import butterknife.Bind;
 import com.teamfrugal.budgetapp.R;
 import com.teamfrugal.budgetapp.database.ListContent;
 import com.teamfrugal.budgetapp.dummy.DummyContent;
+import com.teamfrugal.budgetapp.ui.SettingsActivity;
 import com.teamfrugal.budgetapp.ui.base.BaseActivity;
 import com.teamfrugal.budgetapp.ui.base.BaseFragment;
 
@@ -100,7 +103,6 @@ public class ArticleDetailFragment extends BaseFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings:
-                // your logic
                 return true;
         }
         return super.onOptionsItemSelected(item);
